@@ -33,8 +33,8 @@ void print_help()
 {
 	std::cout << "Parameters: " << std::endl;
 	std::cout << "\t-h\t\tPrint this help and quit" << std::endl;
-	std::cout << "\t-l [location]\tLocation (eu, usa, hk, jp)" << std::endl;
-	std::cout << "\t-u [username]\tUsername (bitcoinaddress)" << std::endl;
+	std::cout << "\t-l [location]\tStratum server:port" << std::endl;
+	std::cout << "\t-u [username]\tUsername (worker)" << std::endl;
 	std::cout << "\t-p [password]\tPassword (default: x)" << std::endl;
 	std::cout << "\t-t [num_thrds]\tNumber of threads (default: number of sys cores)" << std::endl;
 	std::cout << "\t-d [level]\tDebug print level (0 = print all, 5 = fatal only, default: 2)" << std::endl;
@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 	std::cout << "Special thanks to tromp for providing optimized CPU equihash solver" << std::endl;
 	std::cout << std::endl;
 
-	std::string location = "us";
+	std::string location = "us-east.pool.gold:3044";
 	std::string user = "GbdHiqZaXWq4mDezTpdG28ovD6UuveW982";
 	std::string password = "x";
 	int num_threads = -1;
@@ -146,8 +146,9 @@ int main(int argc, char* argv[])
 
 	if (!benchmark)
 	{
-		std::string host = "us-east.pool.gold";
-		std::string port = "3044";
+		size_t delim = location.find(':');
+		std::string host = location.substr(0, delim);
+		std::string port = location.substr(delim + 1);
 
 		std::shared_ptr<boost::asio::io_service> io_service(new boost::asio::io_service);
 
