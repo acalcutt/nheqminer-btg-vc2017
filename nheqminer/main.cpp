@@ -74,13 +74,13 @@ int main(int argc, char* argv[])
 #ifdef WIN32
 	system("");
 #endif
-	std::cout << "Equihash CPU Miner for NiceHash v" STANDALONE_MINER_VERSION << std::endl;
+	std::cout << "Equihash CPU Miner for BTG v" STANDALONE_MINER_VERSION << std::endl;
 	std::cout << "Thanks to Zcash developers for providing most of the code" << std::endl;
 	std::cout << "Special thanks to tromp for providing optimized CPU equihash solver" << std::endl;
 	std::cout << std::endl;
 
-	std::string location = "eu";
-	std::string user = "1DXnVXrTmcEd77Z6E4zGxkn7fGeHXSGDt1";
+	std::string location = "us";
+	std::string user = "GbdHiqZaXWq4mDezTpdG28ovD6UuveW982";
 	std::string password = "x";
 	int num_threads = -1;
 	bool benchmark = false;
@@ -146,8 +146,8 @@ int main(int argc, char* argv[])
 
 	if (!benchmark)
 	{
-		std::string host = "equihash." + location + ".nicehash.com";
-		std::string port = "3357";
+		std::string host = "us-east.pool.gold";
+		std::string port = "3044";
 
 		std::shared_ptr<boost::asio::io_service> io_service(new boost::asio::io_service);
 
