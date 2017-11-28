@@ -5,11 +5,13 @@ Requires:
 
 # Run instructions:
 
+*note this version is set to mine at us-east.pool.gold in nheqminer\main.cpp*
+
 If run without parameters, miner will start mining with 75% of available virtual cores on NiceHash. Use parameter -h to learn about available parameters:
 
         -h              Print this help and quit
         -l [location]   Location (eu, usa, hk, jp)
-        -u [username]   Username (bitcoinaddress)
+        -u [username]   Username (bitcoingoldaddress)
         -p [password]   Password (default: x)
         -t [num_thrds]  Number of threads (default: number of sys cores)
         -d [level]      Debug print level (0 = print all, 5 = fatal only, default: 2)
@@ -24,12 +26,12 @@ Example to run with full logging (including network dump):
 
         nheqminer_x64_AVX.exe -d 0
         
-Example to mine with your own BTC address and worker1 on USA server:
+Example to mine with your own BTG address and worker1 on USA server:
 
-        nheqminer_x64_AVX.exe -l usa -u YOUR_BTC_ADDRESS_HERE.worker1
+        nheqminer_x64_AVX.exe -l usa -u YOUR_BTG_ADDRESS_HERE.worker1
 
-Example to mine with your own BTC address and worker1 on EU server, using 6 threads:
+Example to mine with your own BTG address and worker1 on EU server, using 6 threads:
 
-        nheqminer_x64_AVX.exe -l eu -u YOUR_BTC_ADDRESS_HERE.worker1 -t 6
+        nheqminer_x64_AVX.exe -l eu -u YOUR_BTG_ADDRESS_HERE.worker1 -t 6
 
 <i>Note: if you have a 4-core CPU with hyper threading enabled (total 8 threads) it is best to run with only 6 threads (experimental benchmarks shows that best results are achieved with 75% threads utilized)</i>
