@@ -24,7 +24,6 @@
 *.lo
 
 # Shared objects (inc. Windows DLLs)
-*.dll
 *.so
 *.so.*
 *.dylib
@@ -72,7 +71,6 @@ dkms.conf
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -110,10 +108,6 @@ dkms.conf
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -377,7 +371,6 @@ __pycache__/
 *.la
 *.lai
 *.so
-*.dll
 *.dylib
 
 # Qt-es
@@ -412,7 +405,6 @@ CMakeLists.txt.user*
 intermediate/**
 
 ## ignore exceptions
-!lib/**
 !inc/**
 build
 
