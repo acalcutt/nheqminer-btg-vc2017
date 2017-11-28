@@ -1,37 +1,7 @@
 # Build instructions:
-
-## Windows:
-
-Windows builds made by us are available here: https://github.com/nicehash/nheqminer/releases
-
-Download and install:
-- Visual Studio 2013 Community: https://www.visualstudio.com/en-us/news/releasenotes/vs2013-community-vs
-- Visual C++ Compiler November 2013 CTP: https://www.microsoft.com/en-us/download/details.aspx?id=41151
-
-Open **nheqminer.sln** under **nheqminer/nheqminer.sln** and build.
-
-## Linux cmake **recommended** (Tested on Ubuntu Desktop 14.04 and 16.04 and Ubuntu server 14.04):
-You should have **CMake** installed (2.8 minimal version), boost (install from the repositories or download boost manually build and install it manually), download the sources manually or via git. 
-Under Ubuntu open a terminal and run the following commands:
-  - `sudo apt-get install cmake build-essential libboost-all-dev`
-  - `git clone https://github.com/nicehash/nheqminer.git`
-  - `cd nheqminer/nheqminer`
-  - `mkdir build`
-  - `cd build`
-  - `cmake ..`
-  - `make`
-
-
-## Linux (Ubuntu/Debian based, Tested on Ubuntu 16.04):
-To build under Ubuntu Linux make sure you have Qt5 installed. You can install it manually from [Qt website](https://www.qt.io/) or install it from the command line: `sudo apt-get install qt5-default`.
-Open a terminal and cd to nheqminer root folder and run the following commands (make sure you have qmake in your PATH, if installed manually from Qt website you will have to export it to your PATH):
-  - `git clone https://github.com/nicehash/nheqminer.git`
-  - `cd nheqminer`
-  - `mkdir build`
-  - `cd build`
-  - `qmake ../nheqminer/nheqminer.pro`
-  - `make`
-  
+Requires:
+- Visual Studio 2017 (make sure to install the 'Universal Windows Platform develoment' workload as it has needed libraries. Also install the Windows 10 SDK under the 'Desktop development with C++' workload)
+- Boost 1.65.1 (for 64bit I built the libs with 'b2 architecture=x86 address-model=64 variant=release link=static')
 
 # Run instructions:
 
