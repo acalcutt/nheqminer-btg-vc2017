@@ -1,7 +1,7 @@
 # Build instructions:
 Requires:
 - Visual Studio 2017 (make sure to install the 'Universal Windows Platform develoment' workload as it has needed libraries. Also install the Windows 10 SDK under the 'Desktop development with C++' workload)
-- Boost 1.65.1 (for 64bit I built the libs with 'b2 architecture=x86 address-model=64 variant=release link=static')
+- Boost 1.65.1 (for 64bit I built the libs with 'b2 architecture=x86 address-model=64 variant=release link=static'. I included the libs I compiled under 'nheqminer\3rdparty\libs\boost')
 
 # Run instructions:
 
